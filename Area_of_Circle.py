@@ -1,10 +1,19 @@
+
 # Write a Python program to calculate area and perimeter of the circle.
-from math import pi 
+from math import pi #import pi for mathemetical calculation
 
-radius = float(input("Enter radius: "))
-# area of the circle
-print(f"Ther area of the circle with radius {radius} is {pi*radius**2} unit.\n---------------")
+def PerimeterOfCircle(radius): #define function for calculating perimeter of the circle
+    Perimeter= 2*pi*radius
+    return Perimeter
 
-# perimeter of the circle
-print(f"The perimeter of the circle with radius {radius} is {2*pi*radius}")
-print(f"The perimeter of the circle with radius {radius} is {2*pi*radius}")
+def AreaOfCircle(radius): #define function for calculating area of the circle
+    area= pi*radius**2
+    return area
+while (1):
+    con = str(input("\nEnter Y for continue OR Any Key for exit: "))
+    if con=="Y" or con=="y":
+        x= float(input("\nEnter radius: ")) #input Radius
+        print("Area of the circle with radius{} is: {:.2f}\n".format(x,AreaOfCircle(x)))
+        print("The perimeter of the circle with radius {} is: {:.2f}".format(x,PerimeterOfCircle(x)))
+    else:
+        break
